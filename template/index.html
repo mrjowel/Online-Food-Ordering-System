@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<!--bootstrap link-->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+<!--css link-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+    <title>Foodie</title>
+  <!--Tittlebar Icon Link-->
+    <link rel="shortcut icon" href="/static/image/icon.jpg">
+</head>
+<body>
+
+      <!--header start-->
+      <header>
+        <div class="container">
+            <!--Nav Start-->
+            <nav class="navbar navbar-expand-lg c_nav">
+                <div class="container-fluid px-0">
+                <!--Logo start-->
+                  <a class="navbar-brand" href="index.html">
+                    <img class="img-fluid logo" src="/static/image/logo.png" alt="BisLite">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background-color: whitesmoke;"></span>
+                  </button>
+                  <div class="collapse navbar-collapse menu" id="Navbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about/">ABOUT US</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="cart/">MENU</a>
+                      </li>
+                      
+
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="{%url 'contact'%}">CONTACT US</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Log In
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a style="color: black !important; font-family: sans-serif;" class="dropdown-item" href="admin/" >Admin</a></li>
+                          <li><a style="color: black !important; " class="dropdown-item" href="{% url 'login'%}" style="color: black">User</a></li>
+                          <li><a style="color: black !important; " class="dropdown-item" href="{% url 'logout' %}" style="color: black" >Logout</a> </li>
+                        </ul>
+                      </li>
+                    
+                  </div>
+                </div>
+              </nav>
+
+            <!--Nav End-->
+        </div>
+    </header>
+    <!--header end-->
+
+
+       <!--Slider start-->
+       <section class="slider slider_con">
+        
+        <div class="">
+            <div class="row s_media">
+                <div class="col-lg-12">
+            <div id="C_carosoul" class="carousel slide" data-bs-ride="true">
+            <!--carosoul-indicator-->
+                <div class="slide_button carousel-indicators c-indicator">
+                  <button type="button" data-bs-target="#C_carosoul" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#C_carosoul" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#C_carosoul" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+            <!--inner-->
+                <div class="carousel-inner">
+              <!--item start-->
+              <!--1st item-->
+                  <div class="carousel-item active">
+                    <div class="row">
+                     
+                      <!--slider image-->
+                        <div class="col-lg-12">
+                          <div class="text-center">
+                            <!--image text start-->
+                            <div class="slide_text">
+                               <h2>Test the difference</h2>
+                                <h2 id="del">Fine & Delicious Food</h2>
+                                <div id="since">
+                                <h2>Since 2002</h2>
+                              </div>
+                              </div>
+                              <!--image text end-->
+                            
+                           <img class="s_img img-fluid" src="/static/image/sld1.jpg" alt="BisLite">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                 
+
+                   <!--2nd item-->
+                   <div class="carousel-item">
+                    <div class="row">
+                     
+                      <!--slider image-->
+                        <div class="col-lg-12">
+                          <div class="text-center">
+                            
+                            <div class="slide_text sld3_text">
+                              <h2>When you go to a restaurant, the less you know about what </h2>
+                              <h2>happens in the kitchen, the more you enjoy your meal.</h2><br>
+                              <h2 style="font-family: emoji; color: aliceblue;">Commited to better service</h2>
+                  
+                             </div>
+                             <!--image text end-->
+                           <img class="s_img img-fluid" src="/static/image/sld2.jpg" alt="BisLite">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                   <!--3rd item-->
+                   <div class="carousel-item">
+                    <div class="row">
+                     
+                      <!--slider image-->
+                        <div class="col-lg-12">
+                          <div class="text-center">
+                           <img class="s_img img-fluid" src="/static/image/sld3.jpg" alt="BisLite">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+    </section>
+
+    <!--slider end-->
+
+
+<!--Offer section start-->
+
+<section>
+  <div class="container">
+   <div class="new_img">
+      <div class="new_img1">
+        
+        <img class="new_img2"src="/static/image/base1.jpg" alt="foodie">
+       
+      </div>
+   </div>
+  </div>
+
+</section>
+<!--Offer section end-->
+
+<!--feature section end-->
+
+<section class="ft">
+ <div class="container ft_content">
+<!--first feature-->
+  <div class="row">
+   <div class="feature col-lg-4">
+      <div class="ft1">
+        <div class="ft1_up row justify-content-center">
+          <div class="col-lg-10 col-md-6">
+        <div class="ft_img">
+            <img src="/static/image/fsh.png" alt="foodie">
+        </div>
+        <div class="ft_tittle">
+          <h4>Fresh & Healthy Fastfoods</h4>
+        </div>
+      </div>
+      </div>
+
+      <div class="ft1_lower">
+        <div class="ft1_pera">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit id delectus consequatur quae optio atque suscipit officiis culpa itaque libero repudiandae deserunt reiciendis consequuntur dolores ducimus quisquam inventore, quas ad!</p>
+        </div>
+      </div>
+      </div>
+   </div>
+  
+
+
+  <!--2nd feature-->
+
+    <div class="feature col-lg-4">
+       <div class="ft1">
+         <div class="ft1_up row justify-content-center">
+          <div class="col-lg-8 col-md-6">
+         <div class="ft_img">
+             <img src="/static/image/chef.png" alt="foodie">
+         </div>
+         <div class="ft_tittle">
+           <h4>Experience Chef</h4>
+         </div>
+          </div>
+       </div>
+ 
+       <div class="ft1_lower">
+         <div class="ft1_pera">
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit id delectus consequatur quae optio atque suscipit officiis culpa itaque libero repudiandae deserunt reiciendis consequuntur dolores ducimus quisquam inventore, quas ad!</p>
+         </div>
+       </div>
+       </div>
+    </div>
+
+
+     <!--3rd feature-->
+
+     <div class="feature col-lg-4">
+      <div class="ft1">
+        <div class="ft1_up row justify-content-center">
+          <div class="col-lg-7 col-md-6">
+        <div class="ft_img">
+            <img src="/static/image/del.png" alt="foodie">
+        </div>
+        <div class="ft_tittle">
+          <h4>Fast Delivery</h4>
+        </div>
+      </div>
+      </div>
+
+      <div class="ft1_lower">
+        <div class="ft1_pera">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit id delectus consequatur quae optio atque suscipit officiis culpa itaque libero repudiandae deserunt reiciendis consequuntur dolores ducimus quisquam inventore, quas ad!</p>
+        </div>
+      </div>
+      </div>
+   </div>
+  </div>
+   
+  </div>
+</section>
+
+<!--feature section end-->
+
+
+  <!--variety start-->
+
+  <section class="course">
+    <div class="container course_con">
+      <!--first row-->
+
+      <div class="cor_hed">
+      <div class="row justify-content-center">
+        
+          <div class="col-lg-3">
+            <h1 class="cor_h1 text-center">Our Speciality</h1>
+        </div>
+      </div>
+      </div>
+
+      <!--second row-->
+      <div class="cour_in">
+      <div class="row justify-content-center">
+        <!--first course-->
+        <div class="col-lg-4 col-md-9">
+          <div class="cor_content">
+            <div class="cor_img">
+              <img class="img-fluid" src="/static/image/bangla..jpg " alt="E-School">
+            </div>
+            <h4>Bangla Food</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore temporibus quas, minus, quis repudiandae dolor architecto accusantium maiores, dicta libero necessitatibus suscipit recusandae repellat reiciendis.</p>              
+          </div>
+        </div>
+
+        <!--second course-->
+        <div class="col-lg-4 col-md-9">
+          <div class="cor_content">
+            <div class="cor_img">
+              <img class="img-fluid" src="/static/image/burger.jpg " alt="E-School">
+            </div>
+            <h4>American Burger</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore temporibus quas, minus, quis repudiandae dolor architecto accusantium maiores, dicta libero necessitatibus suscipit recusandae repellat reiciendis.</p>              
+          </div>
+        </div>
+
+        <!--3rd course-->
+        <div class="col-lg-4 col-md-9">
+          <div class="cor_content">
+            <div class="cor_img">
+              <img class="img-fluid" src="/static/image/pizza.jpg " alt="E-School">
+            </div>
+            <h4>Mexican Pizza</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore temporibus quas, minus, quis repudiandae dolor architecto accusantium maiores, dicta libero necessitatibus suscipit recusandae repellat reiciendis.</p>              
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!--variety end-->
+
+ <!--Contact Part start-->
+ <section class="contact">
+       
+  <div class="container">
+    <!--First Row-->
+    <div class="row justify-content-center">
+      
+      <div class="col-lg-9">
+        <div class="contact_head t_feature text-center">
+        <h1>Keep in touch with us</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Second Row-->
+
+  <div class="row justify-content-center">
+    <div class="col-lg-9">
+      <div class="t_feature text-center">
+        <div class="row g-3 justify-content-center">
+          <div class="col-9 col-md-10">
+            <form action="#">
+            <input type="email" class="form-control con_form" placeholder="Enter your email to update" aria-label="First name">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn_contact" type="submit">Submit</button>
+          </div>
+          
+        </form>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Third Row-->
+
+  
+  <div class="row justify-content-center">
+   
+      <div class="col-lg-5">
+        <div class="icon text-center">
+        <ul class="list-inlile">
+          <li class="list-inline-item"><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa-brands fa-square-pinterest"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!--contact part end-->
+
+
+
+<!--Footer start-->
+ 
+ <section class="footer">
+  <div class="container">
+   <div class="fot-content">
+   <div class="row justify-content-center">
+
+     
+     <div class="col-md-4 col-8">
+       <p>HALOVIETNAM LTD <br>
+         66, Dang Van ngu, Dong Da <br>
+         Hanoi, Vietnam <br>
+         contact@halovietnam.com<br>
+         +844 35149182
+       </p>
+     </div>
+
+     <div class="col-md-2 col-6">
+       <p> <a href="#">Examples </a><br>
+         <a href="#">Shop </a><br>
+         <a href="#">License </a><br></p>
+     </div>
+
+     <div class="col-md-2 col-6">
+       <p><a href="#">Contact </a><br>
+         <a href="#"> About </a> <br>
+         <a href="#">Privacy </a> <br>
+         <a href="#">Terms </a></p>
+     </div>
+
+     <div class="col-md-2 col-6">
+       <p><a href="#">Download </a> <br>
+         <a href="#"> Support </a><br>
+           <a href="#"> Documents </a></p>
+     </div>
+
+     <div class="col-md-2 col-6">
+      <p><a href="#">Media </a> <br>
+       <a href="#">Blog </a><br>
+         <a href="#">Forums </a></p>
+     </div>
+   </div>
+   </div>
+  </div>
+</section>
+
+
+
+
+   <!--Footer end-->
+
+
+
+<!--Javascript link-->
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/script.js"></script> 
+</body>
+</html>

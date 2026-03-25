@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<!--bootstrap link-->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+<!--css link-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+    <title>Foodie</title>
+  <!--Tittlebar Icon Link-->
+    <link rel="shortcut icon" href="/static/image/icon.jpg">
+
+    {% block head %} {% endblock %}
+</head>
+<body>
+     
+     
+      <!--header start-->
+      <header>
+        <div class="container">
+            <!--Nav Start-->
+            <nav class="navbar navbar-expand-lg c_nav">
+                <div class="container-fluid px-0">
+                <!--Logo start-->
+                  <a class="navbar-brand" href="index.html">
+                    <img class="img-fluid logo" src="/static/image/logo.png" alt="BisLite">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background-color: whitesmoke;"></span>
+                  </button>
+                  <div class="collapse navbar-collapse menu" id="Navbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">MENU</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT US</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Log In
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a style="color: black !important; font-family: sans-serif;" class="dropdown-item" href="admin/" >Admin</a></li>
+                          <li><a style="color: black !important; " class="dropdown-item" href="#" style="color: black">User</a></li>
+                        </ul>
+                      </li>
+                    
+                  </div>
+                </div>
+              </nav>
+
+            <!--Nav End-->
+        </div>
+    </header>
+    <!--header end-->
+
+
+
+    <!--Footer start-->
+ <body>
+ <section class="footer">
+  <div class="container">
+   <div class="fot-content">
+   <div class="row justify-content-center">
+
+     
+     <div class="col-md-4 col-8">
+       <p>HALOVIETNAM LTD <br>
+         66, Dang Van ngu, Dong Da <br>
+         Hanoi, Vietnam <br>
+         contact@halovietnam.com<br>
+         +844 35149182
+       </p>
+     </div>
+
+     <div class="col-md-2 col-6">
+       <p> <a href="#">Examples </a><br>
+         <a href="#">Shop </a><br>
+         <a href="#">License </a><br></p>
+     </div>
+
+     <div class="col-md-2 col-6">
+       <p><a href="#">Contact </a><br>
+         <a href="#"> About </a> <br>
+         <a href="#">Privacy </a> <br>
+         <a href="#">Terms </a></p>
+     </div>
+
+     <div class="col-md-2 col-6">
+       <p><a href="#">Download </a> <br>
+         <a href="#"> Support </a><br>
+           <a href="#"> Documents </a></p>
+     </div>
+
+     <div class="col-md-2 col-6">
+      <p><a href="#">Media </a> <br>
+       <a href="#">Blog </a><br>
+         <a href="#">Forums </a></p>
+     </div>
+   </div>
+   </div>
+  </div>
+</section>
+
+
+{% block foot %} {% endblock %}
+
+   <!--Footer end-->
+
+    <!--Javascript link-->
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/script.js"></script> {% block script %} {% endblock %}
+</body>

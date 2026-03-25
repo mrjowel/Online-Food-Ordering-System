@@ -1,0 +1,30 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+{% if products %}
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <h3 class="card-subtitle">{{ product.price }}</h3>
+                            <p class="card-text">{{ product.description }}</p>
+                            <p class="card-text mt-1">{{ product.created_at }}</p>
+                            <a href="{% url 'cart' %}" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                    </div>
+                    <div class="row">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% else %}
+    <p>No Products to Show</p>
+{% endif %}
+{% endblock %}
